@@ -1,3 +1,4 @@
+package core;
 public enum WaveType {
     SINE,
     SQUARE,

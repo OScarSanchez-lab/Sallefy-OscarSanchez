@@ -1,5 +1,8 @@
+import core.SoundSynth;
+import core.WaveType;
 public class Main {
     public static void main(String[] args) {
+        
         SoundSynth synth = new SoundSynth();
 
         try{

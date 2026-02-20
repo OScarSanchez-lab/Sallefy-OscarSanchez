@@ -1,0 +1,16 @@
+package core; 
+import java.util.Scanner;
+
+public class MenuController implements Menu{
+    Scanner sca = new Scanner(System.in);
+
+    @Override
+    public void show(String s){ System.out.println(s);}
+
+    @Override
+    public Integer getInteger(){
+        return sca.nexInt();
+    }
+    @Override
+    public String getString(){return sca.nexInt();}
+}
