@@ -8,6 +8,17 @@ public class Song {
     private Mood mood;
     private String style;
 
-    public 
+    public Song(int id, String title, String artist, int durationSeconds, Mood mood, String style){
+        this.id = id;
+        this.title = title;
+        this.artist = artist;
+        this.durationSeconds = durationSeconds;
+        this.mood = mood;
+        this.style = style;
+    }
+
+    public void getId(){
+        return
+    }
     
 }
