@@ -8,5 +8,6 @@ public class Song {
     private Mood mood;
     private String style;
 
+    public 
     
 }
