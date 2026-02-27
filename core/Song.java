@@ -1,14 +1,16 @@
 package core;
 import java.util.ArrayList;
+import java.util.List;
 public class Song {
     private int id;
     private String title;
     private String artist;
+    private String style;
     private int durationSeconds;
     private Mood mood;
-    private String style;
+   private List<Note> notes = new ArrayList<>();
 
-    public Song(int id, String title, String artist, int durationSeconds, Mood mood, String style){
+    public Song(int id, String title, String artist, int durationSeconds, Mood mood, String style) {
         this.id = id;
         this.title = title;
         this.artist = artist;
@@ -17,8 +19,30 @@ public class Song {
         this.style = style;
     }
 
-    public void getId(){
-        return
+    public Song(String string, String title2, String artist2, int durationSeconds2, Mood happy, String style2) {
+        //TODO Auto-generated constructor stub
     }
-    
+
+    public int getId() {
+         return id; 
+        }
+    public String getTitle() {
+         return title;
+         }
+    public int getDurationSeconds() { 
+        return durationSeconds; 
+    }
+    public List<Note> getNotes() {
+        return notes; 
+    }
+    public boolean isPlayable() { 
+        return !notes.isEmpty(); 
+    }
+
+    @Override
+    public String toString() {
+        String status = isPlayable() ? "[PLAYABLE]" : "[NOT PLAYABLE]";
+        return String.format("%s | %-15s | %-12s | %ds | %-8s | %s", 
+                id, title, artist, durationSeconds, mood, status);
+    }
 }

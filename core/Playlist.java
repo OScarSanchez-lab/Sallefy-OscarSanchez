@@ -1,22 +1,28 @@
 package core;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Playlist {
-    private int id;
-    private String name;
-    private Mood mood;
-    private String description;
-    
-    public Playlist(int id, String name, String description, Mood mood){
+    private String id, name, description;
+    private List<String> songIds = new ArrayList<>();
+
+    public Playlist(String id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.mood = mood;
-
     }
-    
-    public void duracionTotal(){
 
+    public String getId() { 
+        return id; 
     }
-    public void Numcanciones(){
-
+    public String getName() { 
+        return name; 
+    }
+    public String getDescription() { 
+        return description; 
+    }
+    public List<String> getSongIds() { 
+        return songIds; 
     }
 }

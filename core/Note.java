@@ -19,4 +19,8 @@ public class Note {
     public WaveType getTimbre(){
         return timbre;
     }
+
+    public int getDurationSeconds() {
+        throw new UnsupportedOperationException("Unimplemented method 'getDurationSeconds'");
+    }
 }
